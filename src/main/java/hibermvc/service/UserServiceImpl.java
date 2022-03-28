@@ -20,13 +20,11 @@ public class UserServiceImpl implements UserService {
         userDao.add(user);
     }
 
-    @Transactional(readOnly = true)
     @Override
     public List<User> listUsers() {
         return userDao.listUsers();
     }
 
-    @Transactional(readOnly = true)
     @Override
     public User getUser(Long id) {
         return userDao.getUser(id);
